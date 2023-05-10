@@ -1,0 +1,43 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>My Books</h1>
+
+            <hr>
+            <div class="card card-body rounded">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th>Title<th>
+                    <th>Author<th>
+                    <th>Price<th>
+                    <th>Year Of Publish<th>
+                    </tr>
+                <thead>
+                <tbody>
+                    {% for book in books %}
+                    <tr>
+                        <td>{{ book.book_title }}</td>
+                        <td></td>
+                        <td>{{ book.book_author }}</td>
+                        <td></td>
+
+                        <td>{{ book.book_price }}</td>
+                        <td></td>
+
+                        <td>{{ book.year_of_publish }}</td>
+                    </tr>
+                    
+                    {% endfor %}
+                <tbody>
+            <table>
+            </div>
+            
+        </div>
+    </div>
+{% endblock main %}
